@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aljabar Matriks &#8212; My sample book</title>
+    <title>Matriks: Tinjauan Komprehensif &#8212; My sample book</title>
   
   
   
@@ -150,8 +150,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/Female Ninja.jpeg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/Female Ninja.jpeg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -352,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -363,11 +365,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aljabar Matriks</h1>
+    <h1>Matriks: Tinjauan Komprehensif</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-matriks">Karakteristik Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-matriks">Penerapan Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-matriks">Contoh Penerapan Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -377,235 +391,203 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="aljabar-matriks">
-<h1>Aljabar Matriks<a class="headerlink" href="#aljabar-matriks" title="Link to this heading">#</a></h1>
+  <p>bawaan jupiter di hilangkan</p>
+<p>generate</p>
+<p>memperbaiki menu</p>
+<p>##<strong>1. Matriks</strong></p>
+<section id="matriks-tinjauan-komprehensif">
+<h1>Matriks: Tinjauan Komprehensif<a class="headerlink" href="#matriks-tinjauan-komprehensif" title="Link to this heading">#</a></h1>
+<p>Matriks merupakan struktur matematika fundamental yang merepresentasikan data dalam bentuk susunan bilangan, simbol, ataupun ekspresi. Bentuknya menyerupai tabel persegi panjang dengan baris dan kolom, di mana setiap elemen (data) diidentifikasi berdasarkan lokasinya (baris dan kolom).</p>
+<section id="karakteristik-matriks">
+<h2>Karakteristik Matriks:<a class="headerlink" href="#karakteristik-matriks" title="Link to this heading">#</a></h2>
+<p><strong>Dimensi:</strong> Ditentukan oleh jumlah baris (m) dan kolom (n). Matriks dengan m baris dan n kolom disebut matriks m x n. Contohnya, matriks dengan 2 baris dan 3 kolom adalah matriks 2 x 3.</p>
+<p><strong>Elemen:</strong> Data yang mengisi matriks. Elemen dapat berupa bilangan real, kompleks, variabel, ataupun fungsi.</p>
+<p><strong>Jenis Matriks:</strong> Berbagai jenis matriks dikategorikan berdasarkan sifatnya, seperti:</p>
 <ul class="simple">
-<li><p>Berikan penjelasan tentang apa itu matriks</p></li>
-<li><p>Operasi Matrik</p></li>
-<li><p>Penjumlahan, Perkalian, Pengurangan, Transpose Matriks</p></li>
-<li><p>Buat 1 program mengalikan secara manual matrik A dan B (menggunakan perulangan)</p></li>
+<li><p><strong>Matriks Nol:</strong> Semua elemennya bernilai nol.</p></li>
+<li><p><strong>Matriks Identitas:</strong> Matriks diagonal dengan elemen diagonal bernilai satu.</p></li>
+<li><p><strong>Matriks Transpose:</strong> Diperoleh dengan menukar baris dan kolom matriks asli.</p></li>
+<li><p><strong>Matriks Persegi:</strong> Matriks dengan jumlah baris dan kolom sama.</p></li>
+<li><p><strong>Matriks Segitiga:</strong> Matriks dengan elemen di atas atau di bawah diagonal utama bernilai nol.</p></li>
 </ul>
-<p>saya disuruh membuat matriks A dan B ukuran 3x3 dan buat matriks C ukuran 3x2</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+</section>
+<section id="operasi-matriks">
+<h2>Operasi Matriks:<a class="headerlink" href="#operasi-matriks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Penjumlahan/Pengurangan:</strong> Dilakukan antar elemen yang memiliki posisi sama pada dua matriks dengan dimensi sama.</p></li>
+<li><p><strong>Perkalian:</strong> Dilakukan dengan aturan perkalian matriks yang melibatkan perkalian elemen dan penjumlahan hasil perkalian.</p></li>
+<li><p><strong>Perkalian dengan Skalar:</strong> Setiap elemen matriks dikalikan dengan skalar (bilangan).</p></li>
+<li><p><strong>Invers Matriks:</strong> Menemukan matriks lain yang ketika dikalikan dengan matriks asli menghasilkan matriks identitas.</p></li>
+</ul>
+</section>
+<section id="penerapan-matriks">
+<h2>Penerapan Matriks:<a class="headerlink" href="#penerapan-matriks" title="Link to this heading">#</a></h2>
+<p>Matriks memiliki banyak aplikasi di berbagai bidang, seperti:</p>
+<ul class="simple">
+<li><p><strong>Matematika:</strong> Sistem persamaan linear, transformasi geometri, kalkulus vektor.</p></li>
+<li><p><strong>Fisika:</strong> Mekanika, elektrodinamika, teori kuantum.</p></li>
+<li><p><strong>Teknik:</strong> Rekayasa kontrol, pemrosesan sinyal, ilmu komputer.</p></li>
+<li><p><strong>Ekonomi:</strong> Pemodelan ekonomi, analisis data keuangan.</p></li>
+<li><p><strong>Ilmu Sosial:</strong> Riset kependudukan, analisis survei.</p></li>
+</ul>
+</section>
+<section id="contoh-penerapan-matriks">
+<h2>Contoh Penerapan Matriks:<a class="headerlink" href="#contoh-penerapan-matriks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Menyelesaikan Sistem Persamaan Linear:</strong> Matriks dapat digunakan untuk merepresentasikan sistem persamaan linear dan menyelesaikannya dengan metode eliminasi Gauss.</p></li>
+<li><p><strong>Transformasi Geometri:</strong> Matriks dapat digunakan untuk merepresentasikan transformasi geometri seperti rotasi, translasi, dan pembesaran.</p></li>
+<li><p><strong>Menganalisis Data Keuangan:</strong> Matriks dapat digunakan untuk menganalisis data keuangan seperti neraca keuangan dan laporan laba rugi.</p></li>
+</ul>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan:<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Matriks merupakan alat matematika penting dan serbaguna dengan berbagai aplikasi di berbagai bidang. Mempelajari matriks membuka peluang untuk memahami dan menyelesaikan berbagai masalah kompleks dalam ilmu pengetahuan dan teknologi.</p>
+<p>###<strong>1.1 Operasi Matriks</strong></p>
+<p><br />
+<strong>A. Penjumlahan Matriks:</strong></p>
+<p>Penjumlahan matriks hanya dapat dilakukan pada matriks dengan dimensi yang sama. Elemen yang memiliki posisi sama pada kedua matriks dijumlahkan.</p>
+<p><strong>Contoh:</strong></p>
+<p>Misalkan matriks A dan B berukuran 2x2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span> <span class="mi">6</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 </pre></div>
 </div>
+<p>Maka penjumlahan matriks A dan B adalah:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span> <span class="mi">2</span><span class="o">+</span><span class="mi">6</span><span class="p">]</span>
+        <span class="p">[</span><span class="mi">3</span><span class="o">+</span><span class="mi">7</span> <span class="mi">4</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>
+
+       <span class="o">=</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">8</span><span class="p">]</span>
+        <span class="p">[</span><span class="mi">10</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
 </div>
+<p><br />
+<strong>B. Perkalian Matriks:</strong></p>
+<p>Perkalian matriks berbeda dengan perkalian bilangan biasa. Perkalian matriks melibatkan perkalian elemen-elemen matriks dan penjumlahan hasil perkaliannya.</p>
+<p><strong>Contoh:</strong></p>
+<p>Misalkan matriks A berukuran 2x2 dan matriks B berukuran 2x3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
 </div>
+<p>Maka perkalian matriks A dan B adalah:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">*</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mi">8</span> <span class="mi">1</span><span class="o">*</span><span class="mi">6</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mi">9</span> <span class="mi">1</span><span class="o">*</span><span class="mi">7</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span><span class="p">]</span>
+        <span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="mi">8</span> <span class="mi">3</span><span class="o">*</span><span class="mi">6</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="mi">9</span> <span class="mi">3</span><span class="o">*</span><span class="mi">7</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="mi">10</span><span class="p">]</span>
+
+       <span class="o">=</span> <span class="p">[</span><span class="mi">21</span> <span class="mi">24</span> <span class="mi">33</span><span class="p">]</span>
+        <span class="p">[</span><span class="mi">49</span> <span class="mi">60</span> <span class="mi">77</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><br />
+<strong>C. Pengurangan Matriks:</strong></p>
+<p>Pengurangan matriks dilakukan dengan cara yang sama seperti penjumlahan matriks, yaitu dengan mengurangkan elemen yang memiliki posisi sama pada kedua matriks.</p>
+<p><strong>Contoh:</strong></p>
+<p>Misalkan kita memiliki dua matriks A dan B berikut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Untuk mengurangkan matriks A dan B, kita perlu mengurangkan elemen-elemen matriks yang seletak.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Hasil pengurangan matriks A dan B adalah matriks berikut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><br />
+<strong>D. Transpose Matriks:</strong></p>
+<p>Transpose matriks adalah operasi yang mengubah baris menjadi kolom dan kolom menjadi baris.</p>
+<p><strong>Contoh:</strong></p>
+<p>Misalkan matriks A berukuran 2x2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Maka transpose matriks A adalah:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">^</span><span class="n">T</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">3</span><span class="p">]</span>
+      <span class="p">[</span><span class="mi">2</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Program Perkalian Matriks</p></li>
+</ol>
+<p>Berikut adalah program Python untuk mengalikan matriks A dan B secara manual menggunakan perulangan:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiply_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="n">rows_A</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">cols_A</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">rows_B</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">cols_B</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="c1"># Membuat matriks hasil dengan ukuran yang sesuai</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols_B</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows_A</span><span class="p">)]</span>
+
+    <span class="c1"># Perkalian matriks</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows_A</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols_B</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols_A</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+
+<span class="c1"># Matriks B</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># Mengalikan dua matriks</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">multiply_matrices</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">C</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-2-33d545cda75f&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">()</span>
-
-<span class="ne">TypeError</span>: array() missing required argument &#39;object&#39; (pos 0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[30, 24, 18]
+[84, 69, 54]
+[138, 114, 90]
 </pre></div>
 </div>
 </div>
 </div>
+<ol class="arabic simple" start="4">
+<li><p>membuat matriks A dan B dengan ordo 3X3 dan matriks C dengan ordo 3X2</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span> <span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">111</span><span class="p">]])</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span> <span class="n">array</span> <span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span> <span class="o">.</span><span class="n">array</span> <span class="p">([[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
 
-<span class="nb">print</span> <span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<span class="c1"># Matriks B</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 
-<span class="nb">print</span> <span class="p">(</span><span class="n">B</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2]
- [6]]
-[[  3   0   4]
- [ -1  -2 111]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Baik, berikut adalah matriks A dan B dengan ukuran 3x3:</p>
-<p>Matriks A:</p>
-<p>A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{pmatrix} \</p>
-<p>Matriks B:</p>
-<p>B = \begin{pmatrix} 9 &amp; 8 &amp; 7 \ 6 &amp; 5 &amp; 4 \ 3 &amp; 2 &amp; 1 \end{pmatrix} \</p>
-<p>Untuk membuat matriks C dengan ukuran 3x2, kita bisa menggunakan angka acak atau nilai tertentu. Berikut adalah contoh matriks C dengan angka acak:</p>
-<p>Matriks C:</p>
-<p>C = \begin{pmatrix} 2 &amp; 5 \ 1 &amp; 3 \ 6 &amp; 8 \end{pmatrix} \</p>
-<p>Matriks D:</p>
-<p>D = \begin{pmatrix} 3 &amp; 1 &amp; 4 \ 1 &amp; 5 &amp; 9 \ 2 &amp; 6 &amp; 5 \end{pmatrix} \</p>
-<p>Dengan matriks A, B, C, dan D ini, kita dapat melakukan berbagai operasi matriks yang sesuai dengan kebutuhan kita.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
-
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
-
-<span class="c1"># Operasi matriks yang diminta</span>
-<span class="n">E</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
-<span class="n">F</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">A</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">C</span>
-<span class="n">H</span> <span class="o">=</span> <span class="n">B</span> <span class="o">@</span> <span class="n">C</span>
-<span class="c1">#A(BC) = (AB)C</span>
-<span class="n">I</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">H</span>
-<span class="n">J</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
-<span class="n">K</span> <span class="o">=</span> <span class="n">J</span> <span class="o">@</span> <span class="n">C</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;E = A + B:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">F = 2 * A:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">F</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">G = A @ C:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">G</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E = A + B:
- [[10 10 10]
- [10 10 10]
- [10 10 10]]
-
-F = 2 * A:
- [[ 2  4  6]
- [ 8 10 12]
- [14 16 18]]
-
-G = A @ C:
- [[ 22  35]
- [ 49  83]
- [ 76 131]]
-(3, 2)
+<span class="c1"># Matriks C</span>
+<span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Matriks A, B, C, dan D</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
-
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
-
-<span class="c1"># Contoh operasi matriks</span>
-<span class="n">E</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>  <span class="c1"># Penjumlahan matriks A dan B</span>
-<span class="n">F</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>  <span class="c1"># Perkalian matriks A dan C</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>  <span class="c1"># Transpose matriks D</span>
-
-
-<span class="c1"># Menampilkan hasil operasi</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil penjumlahan matriks A dan B:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil perkalian matriks A dan C:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transpose dari matriks D:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil penjumlahan matriks A dan B:
-[[10 10 10]
- [10 10 10]
- [10 10 10]]
-
-Hasil perkalian matriks A dan C:
-[[ 22  35]
- [ 49  83]
- [ 76 131]]
-
-Transpose dari matriks D:
-[[3 1 2]
- [1 5 6]
- [4 9 5]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Matriks A, B, dan C</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
-
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="c1"># Hitung A(BC)</span>
-<span class="n">result1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
-
-<span class="c1"># Hitung (AB)C</span>
-<span class="n">result2</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
-
-<span class="c1"># Periksa apakah hasil kedua operasi sama</span>
-<span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">result1</span><span class="p">,</span> <span class="n">result2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kedua hasil perkalian matriks A(BC) dan (AB)C sama:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A(BC) =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">result1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(AB)C =</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">result2</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kedua hasil perkalian matriks A(BC) dan (AB)C tidak sama.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kedua hasil perkalian matriks A(BC) dan (AB)C sama:
-A(BC) =
- [[ 192  366]
- [ 561 1059]
- [ 930 1752]]
-(AB)C =
- [[ 192  366]
- [ 561 1059]
- [ 930 1752]]
-</pre></div>
-</div>
-</div>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -645,7 +627,24 @@ A(BC) =
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-matriks">Karakteristik Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-matriks">Penerapan Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-matriks">Contoh Penerapan Matriks:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
