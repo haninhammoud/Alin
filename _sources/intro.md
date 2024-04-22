@@ -1,11 +1,8 @@
-# Welcome to your Jupyter Book
+# Selamat Datang di Notebook Hanin 
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Berikut merupakan notebook tugas Komputasi Aljabar Liniear Semester 2 oleh Hanin 230411100005.
 
-Check out the content pages bundled with this sample book to see more.
+Semoga notebook ini dapat bermanfaat bagi yang pembaca dan Terimakasih atas waktu yang anda luangkan untuk membaca notebook saya:).
 
 ```{tableofcontents}
 ```
