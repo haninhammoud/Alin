@@ -4,7 +4,9 @@
 format: jb-book
 root: intro
 chapters:
-- file: aljabarmatrix
-- file: sistemlinear
-- file: Matrix-Invers
-- file: Transformasi-Linier
+- file: tugas1_Sistem-Linear
+- file: tugas2_Aljabar-Matriks
+- file: tugas3_Matrik-Invers
+- file: tugas4_Determinan-Matriks
+- file: tugas5_Transformasi-Linier
+- file: tugas6_Aplikasi-KAL

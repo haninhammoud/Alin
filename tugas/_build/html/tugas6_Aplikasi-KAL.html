@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pengertian PageRank &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas6_Aplikasi-KAL';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Transformasi Linier" href="tugas5_Transformasi-Linier.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logs.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logs.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Hanin’s Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>1. Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>Matrix Invers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="tugas5_Transformasi-Linier.html"><strong>Transformasi Linier</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Pengertian PageRank</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas6_Aplikasi-KAL.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugas6_Aplikasi-KAL.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pengertian PageRank</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pengertian-pagerank">
+<h1><strong>Pengertian PageRank</strong><a class="headerlink" href="#pengertian-pagerank" title="Link to this heading">#</a></h1>
+<p>PageRank adalah algoritma yang digunakan oleh mesin pencari Google untuk menentukan peringkat situs web berdasarkan tingkat popularitas dan relevansi.</p>
+<p>Algoritma ini dikembangkan oleh Larry Page dan Sergey Brin, pendiri Google, dan menjadi inti dari teknologi yang membedakan Google dari mesin pencari lain pada masa awal internet.</p>
+<p>Prinsip dasar dari PageRank adalah bahwa halaman web yang memiliki lebih banyak tautan masuk (backlinks) dari halaman web lain dianggap lebih penting dan relevan.</p>
+<p>Semakin banyak halaman web yang menunjuk ke suatu halaman, semakin tinggi peringkat halaman tersebut.</p>
+<p>Selain itu, halaman web yang memiliki tautan masuk dari halaman web yang juga memiliki peringkat tinggi akan mendapatkan bobot lebih besar.</p>
+<p>Algoritma PageRank menggunakan sejumlah iterasi untuk menghitung nilai PageRank dari setiap halaman web.</p>
+<p>Pada setiap iterasi, nilai PageRank suatu halaman akan diperbarui berdasarkan nilai PageRank halaman-halaman lain yang menunjuk kepadanya.</p>
+<p>Proses ini akan terus berlanjut hingga konvergensi, yaitu ketika nilai PageRank setiap halaman tidak lagi berubah secara signifikan.</p>
+<p>Selain itu, algoritma PageRank juga mempertimbangkan faktor-faktor lain seperti tautan keluar (outlinks) dari suatu halaman, jumlah tautan yang diterima oleh suatu halaman, dan bobot relatif dari tautan-tautan tersebut.</p>
+<p>Semua faktor ini digunakan untuk menghitung nilai PageRank yang mencerminkan tingkat popularitas dan relevansi suatu halaman web.</p>
+<p>##Teknik error toleransi</p>
+<p>Teknik error toleransi adalah metode yang digunakan untuk mengevaluasi konvergensi dalam perhitungan PageRank tanpa harus menunggu sejumlah iterasi yang ditentukan.</p>
+<p>Dengan menggunakan error toleransi, proses perhitungan PageRank dapat dihentikan ketika perubahan PageRank pada setiap node telah cukup kecil, sehingga perubahan selanjutnya tidak lagi signifikan.</p>
+<p>Error toleransi mengukur perbedaan antara nilai PageRank yang dihitung pada iterasi saat ini dengan nilai PageRank pada iterasi sebelumnya.</p>
+<p>Jika perbedaan ini lebih kecil dari nilai toleransi yang ditentukan, maka proses perhitungan dianggap telah konvergen dan dapat dihentikan.</p>
+<p>Hal ini membuat proses perhitungan PageRank menjadi lebih efisien karena tidak perlu menunggu sejumlah iterasi tetap yang mungkin dapat dihentikan lebih awal.</p>
+<p>##Contoh Penggunaan Error Toleransi</p>
+<p>Salah satu cara menghentikan iterasi pada algoritma PageRank adalah dengan menggunakan error toleransi.</p>
+<p>Dalam metode ini, proses iterasi akan berhenti ketika selisih nilai PageRank antara iterasi saat ini dengan iterasi sebelumnya sudah cukup kecil, atau dengan kata lain sudah konvergen.</p>
+<p>Hal ini akan memudahkan kita dalam menghitung PageRank tanpa harus menentukan jumlah iterasi terlebih dahulu.</p>
+<p>Misalnya, kita dapat menentukan error toleransi sebesar 0,0001.</p>
+<p>Proses iterasi akan terus berjalan hingga selisih nilai PageRank antara iterasi saat ini dan sebelumnya lebih kecil atau sama dengan 0,0001.</p>
+<p>Dengan begitu, kita tidak perlu lagi menentukan jumlah iterasi maksimal, karena perhitungan akan berhenti secara otomatis saat nilai error sudah mencapai toleransi yang ditetapkan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">pagerank</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">num_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.85</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">M_hat</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="n">M</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">M_hat</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">v</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">hasil_pagerank</span> <span class="o">=</span> <span class="n">pagerank</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+
+<span class="n">formatted_output</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hasil_pagerank</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">formatted_output</span><span class="p">)</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">hasil_pagerank</span> <span class="o">=</span> <span class="n">pagerank</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+
+<span class="n">rounded_output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">hasil_pagerank</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rounded_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.39, 0.21, 0.40]
+[[0.39]
+ [0.21]
+ [0.4 ]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>##Penjelasan Root Sum Square Error</p>
+<p>Root Sum Square Error (RSSE) adalah metrik yang digunakan untuk mengevaluasi kinerja model regresi.</p>
+<p>Matrik ini dihitung dengan mengambil akar kuadrat rata-rata dari kuadrat kesalahan prediksi.</p>
+<p>Dengan kata lain, RSSE mengukur seberapa dekat nilai prediksi mendekati nilai sebenarnya.</p>
+<p>Semakin kecil nilai RSSE, semakin baik kinerja model regresi tersebut.</p>
+<p>Perhitungan RSSE dilakukan dengan menggunakan rumus berikut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSSE</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Di mana:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y_true</span> <span class="n">adalah</span> <span class="n">nilai</span> <span class="n">sebenarnya</span> <span class="n">dari</span> <span class="n">variabel</span> <span class="n">target</span>
+
+<span class="n">y_pred</span> <span class="n">adalah</span> <span class="n">nilai</span> <span class="n">prediksi</span> <span class="n">dari</span> <span class="n">model</span>
+
+<span class="n">n</span> <span class="n">adalah</span> <span class="n">jumlah</span> <span class="n">data</span><span class="o">/</span><span class="n">sampel</span>
+</pre></div>
+</div>
+<p>Dengan menggunakan RSSE, kita dapat mengetahui seberapa besar perbedaan antara nilai sebenarnya dan nilai prediksi. Jika nilai RSSE semakin kecil, maka model regresi semakin akurat dalam memprediksi nilai target.</p>
+<p>Untuk memberikan contoh kode yang menerapkan algoritma PageRank dengan menggunakan error toleransi berdasarkan Root Sum Square Error (RSSE), kami akan menggunakan Python dan library NumPy untuk mempermudah perhitungan matriks. Berikut adalah contoh kode sederhana yang menerapkan konsep ini:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Fungsi untuk membuat matriks transisi</span>
+<span class="k">def</span> <span class="nf">create_transition_matrix</span><span class="p">(</span><span class="n">graph</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">links</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">graph</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">links</span><span class="p">:</span>
+            <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">links</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">links</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="c1"># Fungsi untuk melakukan algoritma PageRank</span>
+<span class="k">def</span> <span class="nf">page_rank</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">damping_factor</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">rsse_tolerance</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+    <span class="n">transition_matrix</span> <span class="o">=</span> <span class="n">create_transition_matrix</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+
+    <span class="c1"># Inisialisasi PageRank awal</span>
+    <span class="n">page_rank_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">):</span>
+        <span class="n">prev_page_rank_vector</span> <span class="o">=</span> <span class="n">page_rank_vector</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># Perbarui PageRank</span>
+        <span class="n">page_rank_vector</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">damping_factor</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">+</span> <span class="n">damping_factor</span> <span class="o">*</span> <span class="n">page_rank_vector</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">transition_matrix</span><span class="p">)</span>
+
+        <span class="c1"># Hitung Root Sum Square Error</span>
+        <span class="n">rsse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">page_rank_vector</span> <span class="o">-</span> <span class="n">prev_page_rank_vector</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+        <span class="c1"># Cek toleransi kesalahan</span>
+        <span class="k">if</span> <span class="n">rsse</span> <span class="o">&lt;</span> <span class="n">rsse_tolerance</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">page_rank_vector</span>
+
+<span class="c1"># Contoh penggunaan dengan graf yang tidak seragam</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">page_rank</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+
+<span class="c1"># Bulatkan hasil PageRank ke satu digit desimal</span>
+<span class="n">rounded_result</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PageRank Vector:&quot;</span><span class="p">,</span> <span class="n">rounded_result</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi vektor PageRank dengan nilai yang diinginkan</span>
+<span class="n">page_rank_vector</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]</span>  <span class="c1"># Contoh nilai, Anda bisa sesuaikan dengan keinginan Anda</span>
+
+<span class="c1"># Cetak vektor PageRank</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PageRank Vector:&quot;</span><span class="p">,</span> <span class="n">page_rank_vector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PageRank Vector: [0.2, 0.1, 0.3, 0.3]
+PageRank Vector: [0.2, 0.1, 0.3, 0.4]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dalam contoh di atas, kami membuat graf dengan 4 halaman dan struktur tautan yang tidak seragam. Setiap halaman memiliki jumlah tautan masuk dan keluar yang berbeda, sehingga hasil PageRank yang dihitung oleh algoritma akan berbeda-beda untuk setiap halaman.</p>
+<p>##Implementasi Kode Python untuk PageRank</p>
+<p>Dalam mengimplementasikan algoritma PageRank menggunakan Python, kita akan memanfaatkan aljabar matriks dan operasi matematika untuk menghitung nilai PageRank setiap halaman web.</p>
+<p>Pertama, kita akan membangun matriks transisi A yang mewakili hubungan antara halaman web.</p>
+<p>Matriks A adalah matriks yang setiap elemennya menggambarkan probabilitas transisi dari satu halaman ke halaman lainnya.</p>
+<p>Selanjutnya, kita akan menghitung nilai PageRank dengan menggunakan persamaan iteratif v1 = A&#64;v0, v2 = A&#64;v1, v3 = A&#64;v2, di mana v0 adalah vektor PageRank awal, dan v1, v2, v3 adalah vektor PageRank yang dihitung secara iteratif.</p>
+<p>Proses iterasi ini akan terus berlanjut hingga nilai PageRank konvergen pada nilai tertentu, atau hingga mencapai batas toleransi error yang ditentukan.</p>
+<p>Untuk mengimplementasikan algoritma PageRank dalam Python, kita perlu melakukan beberapa langkah:</p>
+<p>Membuat graf sebagai input, yang biasanya direpresentasikan sebagai matriks atau list of lists.</p>
+<p>Membuat fungsi untuk menghitung distribusi PageRank.</p>
+<p>Melakukan iterasi hingga konvergensi atau mencapai jumlah iterasi maksimum.</p>
+<p>Berikut adalah contoh implementasi sederhana dari algoritma PageRank dalam Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Definisikan matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+
+<span class="c1"># Definisikan vektor v0</span>
+<span class="n">v0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Fungsi untuk menghasilkan vektor berikutnya</span>
+<span class="k">def</span> <span class="nf">next_vector</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">vector</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">vector</span><span class="p">)</span>
+
+<span class="c1"># Jumlah iterasi yang diinginkan</span>
+<span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># List untuk menyimpan semua vektor</span>
+<span class="n">vectors</span> <span class="o">=</span> <span class="p">[</span><span class="n">v0</span><span class="p">]</span>
+
+<span class="c1"># Menghitung vektor-vektor berikutnya dengan error handling</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">v_next</span> <span class="o">=</span> <span class="n">next_vector</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">vectors</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">vectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v_next</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error terjadi pada iterasi ke-</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+
+<span class="c1"># Mencetak semua vektor yang berhasil dihitung</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vectors</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Jika tidak ada error, cetak jumlah iterasi yang berhasil</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span> <span class="o">==</span> <span class="n">num_iterations</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah iterasi yang berhasil: </span><span class="si">{</span><span class="n">num_iterations</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah iterasi yang berhasil: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vectors</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v0 = [0.  0.  1.  0.5]
+v1 = [1.  0.5 0.  0. ]
+v2 = [0.  0.  1.  0.5]
+v3 = [1.  0.5 0.  0. ]
+v4 = [0.  0.  1.  0.5]
+Jumlah iterasi yang berhasil: 5
+</pre></div>
+</div>
+</div>
+</div>
+<p>##Kesimpulan dan Saran</p>
+<p>Dalam kesimpulan, PageRank merupakan algoritma yang digunakan oleh Google untuk menentukan peringkat halaman web berdasarkan pada jumlah dan kualitas tautan yang menunjuk ke halaman tersebut.</p>
+<p>Algoritma ini memainkan peran penting dalam meningkatkan hasil pencarian yang relevan bagi pengguna.</p>
+<p>Melalui penerapan error toleransi dan root sum square error, kita dapat menghitung PageRank dengan lebih akurat dan cepat, tanpa perlu melakukan iterasi hingga konvergensi.</p>
+<p>Dengan demikian, halaman web yang dinilai paling relevan dan berkualitas akan mendapatkan peringkat yang lebih tinggi di hasil pencarian.</p>
+<p>Untuk pengembangan lebih lanjut, disarankan untuk terus mengoptimalkan algoritma PageRank dengan mempertimbangkan faktor-faktor lain, seperti konten halaman, kualitas link, dan preferensi pengguna.</p>
+<p>Selain itu, eksplorasi lebih dalam mengenai penggunaan machine learning dan kecerdasan buatan dalam memprediksi dan meningkatkan PageRank juga dapat menjadi area yang menarik untuk diteliti.</p>
+<p>Dengan terus menyempurnakan algoritma PageRank, diharapkan hasil pencarian di internet dapat semakin relevan dan berguna bagi pengguna.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tugas5_Transformasi-Linier.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Transformasi Linier</strong></p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
