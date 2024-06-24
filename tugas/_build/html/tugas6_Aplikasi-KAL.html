@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -177,10 +177,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>1. Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>Matrix Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>ALJABAR MATRIKS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>MATRIKS INVERS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>DETERMINAN MATRIKS</strong></a></li>
 
 
 
@@ -359,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -375,6 +377,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-error-toleransi">Teknik error toleransi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-error-toleransi">Contoh Penggunaan Error Toleransi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-root-sum-square-error">Penjelasan Root Sum Square Error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-kode-python-untuk-pagerank">Implementasi Kode Python untuk PageRank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dan-saran">Kesimpulan dan Saran</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -396,13 +410,16 @@ document.write(`
 <p>Proses ini akan terus berlanjut hingga konvergensi, yaitu ketika nilai PageRank setiap halaman tidak lagi berubah secara signifikan.</p>
 <p>Selain itu, algoritma PageRank juga mempertimbangkan faktor-faktor lain seperti tautan keluar (outlinks) dari suatu halaman, jumlah tautan yang diterima oleh suatu halaman, dan bobot relatif dari tautan-tautan tersebut.</p>
 <p>Semua faktor ini digunakan untuk menghitung nilai PageRank yang mencerminkan tingkat popularitas dan relevansi suatu halaman web.</p>
-<p>##Teknik error toleransi</p>
+<section id="teknik-error-toleransi">
+<h2>Teknik error toleransi<a class="headerlink" href="#teknik-error-toleransi" title="Link to this heading">#</a></h2>
 <p>Teknik error toleransi adalah metode yang digunakan untuk mengevaluasi konvergensi dalam perhitungan PageRank tanpa harus menunggu sejumlah iterasi yang ditentukan.</p>
 <p>Dengan menggunakan error toleransi, proses perhitungan PageRank dapat dihentikan ketika perubahan PageRank pada setiap node telah cukup kecil, sehingga perubahan selanjutnya tidak lagi signifikan.</p>
 <p>Error toleransi mengukur perbedaan antara nilai PageRank yang dihitung pada iterasi saat ini dengan nilai PageRank pada iterasi sebelumnya.</p>
 <p>Jika perbedaan ini lebih kecil dari nilai toleransi yang ditentukan, maka proses perhitungan dianggap telah konvergen dan dapat dihentikan.</p>
 <p>Hal ini membuat proses perhitungan PageRank menjadi lebih efisien karena tidak perlu menunggu sejumlah iterasi tetap yang mungkin dapat dihentikan lebih awal.</p>
-<p>##Contoh Penggunaan Error Toleransi</p>
+</section>
+<section id="contoh-penggunaan-error-toleransi">
+<h2>Contoh Penggunaan Error Toleransi<a class="headerlink" href="#contoh-penggunaan-error-toleransi" title="Link to this heading">#</a></h2>
 <p>Salah satu cara menghentikan iterasi pada algoritma PageRank adalah dengan menggunakan error toleransi.</p>
 <p>Dalam metode ini, proses iterasi akan berhenti ketika selisih nilai PageRank antara iterasi saat ini dengan iterasi sebelumnya sudah cukup kecil, atau dengan kata lain sudah konvergen.</p>
 <p>Hal ini akan memudahkan kita dalam menghitung PageRank tanpa harus menentukan jumlah iterasi terlebih dahulu.</p>
@@ -447,7 +464,9 @@ document.write(`
 </div>
 </div>
 </div>
-<p>##Penjelasan Root Sum Square Error</p>
+</section>
+<section id="penjelasan-root-sum-square-error">
+<h2>Penjelasan Root Sum Square Error<a class="headerlink" href="#penjelasan-root-sum-square-error" title="Link to this heading">#</a></h2>
 <p>Root Sum Square Error (RSSE) adalah metrik yang digunakan untuk mengevaluasi kinerja model regresi.</p>
 <p>Matrik ini dihitung dengan mengambil akar kuadrat rata-rata dari kuadrat kesalahan prediksi.</p>
 <p>Dengan kata lain, RSSE mengukur seberapa dekat nilai prediksi mendekati nilai sebenarnya.</p>
@@ -534,7 +553,9 @@ PageRank Vector: [0.2, 0.1, 0.3, 0.4]
 </div>
 </div>
 <p>Dalam contoh di atas, kami membuat graf dengan 4 halaman dan struktur tautan yang tidak seragam. Setiap halaman memiliki jumlah tautan masuk dan keluar yang berbeda, sehingga hasil PageRank yang dihitung oleh algoritma akan berbeda-beda untuk setiap halaman.</p>
-<p>##Implementasi Kode Python untuk PageRank</p>
+</section>
+<section id="implementasi-kode-python-untuk-pagerank">
+<h2>Implementasi Kode Python untuk PageRank<a class="headerlink" href="#implementasi-kode-python-untuk-pagerank" title="Link to this heading">#</a></h2>
 <p>Dalam mengimplementasikan algoritma PageRank menggunakan Python, kita akan memanfaatkan aljabar matriks dan operasi matematika untuk menghitung nilai PageRank setiap halaman web.</p>
 <p>Pertama, kita akan membangun matriks transisi A yang mewakili hubungan antara halaman web.</p>
 <p>Matriks A adalah matriks yang setiap elemennya menggambarkan probabilitas transisi dari satu halaman ke halaman lainnya.</p>
@@ -600,7 +621,9 @@ Jumlah iterasi yang berhasil: 5
 </div>
 </div>
 </div>
-<p>##Kesimpulan dan Saran</p>
+</section>
+<section id="kesimpulan-dan-saran">
+<h2>Kesimpulan dan Saran<a class="headerlink" href="#kesimpulan-dan-saran" title="Link to this heading">#</a></h2>
 <p>Dalam kesimpulan, PageRank merupakan algoritma yang digunakan oleh Google untuk menentukan peringkat halaman web berdasarkan pada jumlah dan kualitas tautan yang menunjuk ke halaman tersebut.</p>
 <p>Algoritma ini memainkan peran penting dalam meningkatkan hasil pencarian yang relevan bagi pengguna.</p>
 <p>Melalui penerapan error toleransi dan root sum square error, kita dapat menghitung PageRank dengan lebih akurat dan cepat, tanpa perlu melakukan iterasi hingga konvergensi.</p>
@@ -608,6 +631,7 @@ Jumlah iterasi yang berhasil: 5
 <p>Untuk pengembangan lebih lanjut, disarankan untuk terus mengoptimalkan algoritma PageRank dengan mempertimbangkan faktor-faktor lain, seperti konten halaman, kualitas link, dan preferensi pengguna.</p>
 <p>Selain itu, eksplorasi lebih dalam mengenai penggunaan machine learning dan kecerdasan buatan dalam memprediksi dan meningkatkan PageRank juga dapat menjadi area yang menarik untuk diteliti.</p>
 <p>Dengan terus menyempurnakan algoritma PageRank, diharapkan hasil pencarian di internet dapat semakin relevan dan berguna bagi pengguna.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -655,6 +679,25 @@ Jumlah iterasi yang berhasil: 5
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teknik-error-toleransi">Teknik error toleransi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan-error-toleransi">Contoh Penggunaan Error Toleransi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-root-sum-square-error">Penjelasan Root Sum Square Error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-kode-python-untuk-pagerank">Implementasi Kode Python untuk PageRank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-dan-saran">Kesimpulan dan Saran</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

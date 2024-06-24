@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Matriks &#8212; My sample book</title>
+    <title>ALJABAR MATRIKS &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2_Aljabar-Matriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Matrix Invers" href="tugas3_Matrik-Invers.html" />
-    <link rel="prev" title="SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN" href="tugas1_Sistem-Linear.html" />
+    <link rel="next" title="MATRIKS INVERS" href="tugas3_Matrik-Invers.html" />
+    <link rel="prev" title="SISTEM LINEAR" href="tugas1_Sistem-Linear.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,10 +178,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1. Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>Matrix Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>ALJABAR MATRIKS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>MATRIKS INVERS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>DETERMINAN MATRIKS</strong></a></li>
 
 
 
@@ -373,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. Matriks</h1>
+    <h1>ALJABAR MATRIKS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,12 +383,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks">1. Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-tinjauan-komprehensif">Matriks: Tinjauan Komprehensif</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-matriks">Karakteristik Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-matriks">Penerapan Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-matriks">Contoh Penerapan Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>1.1 Operasi Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-perkalian-matriks"><strong>2. Program Perkalian Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-matriks-a-dan-b-dengan-ordo-3x3-dan-matriks-c-dengan-ordo-3x2"><strong>3. membuat matriks A dan B dengan ordo 3X3 dan matriks C dengan ordo 3X2</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -402,8 +406,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matriks">
-<h1><strong>1. Matriks</strong><a class="headerlink" href="#matriks" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-matriks">
+<h1><strong>ALJABAR MATRIKS</strong><a class="headerlink" href="#aljabar-matriks" title="Link to this heading">#</a></h1>
+<section id="matriks">
+<h2>1. Matriks<a class="headerlink" href="#matriks" title="Link to this heading">#</a></h2>
+</section>
 <section id="matriks-tinjauan-komprehensif">
 <h2>Matriks: Tinjauan Komprehensif<a class="headerlink" href="#matriks-tinjauan-komprehensif" title="Link to this heading">#</a></h2>
 <p>Matriks merupakan struktur matematika fundamental yang merepresentasikan data dalam bentuk susunan bilangan, simbol, ataupun ekspresi. Bentuknya menyerupai tabel persegi panjang dengan baris dan kolom, di mana setiap elemen (data) diidentifikasi berdasarkan lokasinya (baris dan kolom).</p>
@@ -451,7 +458,9 @@ document.write(`
 <section id="kesimpulan">
 <h3>Kesimpulan:<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h3>
 <p>Matriks merupakan alat matematika penting dan serbaguna dengan berbagai aplikasi di berbagai bidang. Mempelajari matriks membuka peluang untuk memahami dan menyelesaikan berbagai masalah kompleks dalam ilmu pengetahuan dan teknologi.</p>
-<p>###<strong>1.1 Operasi Matriks</strong></p>
+</section>
+<section id="id1">
+<h3><strong>1.1 Operasi Matriks</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><br />
 <strong>A. Penjumlahan Matriks:</strong></p>
 <p>Penjumlahan matriks hanya dapat dilakukan pada matriks dengan dimensi yang sama. Elemen yang memiliki posisi sama pada kedua matriks dijumlahkan.</p>
@@ -523,7 +532,9 @@ document.write(`
       <span class="p">[</span><span class="mi">2</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>##<strong>2. Program Perkalian Matriks</strong></p>
+</section>
+<section id="program-perkalian-matriks">
+<h3><strong>2. Program Perkalian Matriks</strong><a class="headerlink" href="#program-perkalian-matriks" title="Link to this heading">#</a></h3>
 <p>Berikut adalah program Python untuk mengalikan matriks A dan B secara manual menggunakan perulangan:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -571,7 +582,9 @@ document.write(`
 </div>
 </div>
 </div>
-<p>##<strong>3. membuat matriks A dan B dengan ordo 3X3 dan matriks C dengan ordo 3X2</strong></p>
+</section>
+<section id="membuat-matriks-a-dan-b-dengan-ordo-3x3-dan-matriks-c-dengan-ordo-3x2">
+<h3><strong>3. membuat matriks A dan B dengan ordo 3X3 dan matriks C dengan ordo 3X2</strong><a class="headerlink" href="#membuat-matriks-a-dan-b-dengan-ordo-3x3-dan-matriks-c-dengan-ordo-3x2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriks A</span>
@@ -632,7 +645,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></p>
+        <p class="prev-next-title"><strong>SISTEM LINEAR</strong></p>
       </div>
     </a>
     <a class="right-next"
@@ -640,7 +653,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Matrix Invers</strong></p>
+        <p class="prev-next-title"><strong>MATRIKS INVERS</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -660,12 +673,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks">1. Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-tinjauan-komprehensif">Matriks: Tinjauan Komprehensif</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#karakteristik-matriks">Karakteristik Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks">Operasi Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-matriks">Penerapan Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-matriks">Contoh Penerapan Matriks:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>1.1 Operasi Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-perkalian-matriks"><strong>2. Program Perkalian Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-matriks-a-dan-b-dengan-ordo-3x3-dan-matriks-c-dengan-ordo-3x2"><strong>3. membuat matriks A dan B dengan ordo 3X3 dan matriks C dengan ordo 3X2</strong></a></li>
 </ul>
 </li>
 </ul>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Pengertian PageRank" href="tugas6_Aplikasi-KAL.html" />
-    <link rel="prev" title="Determinan Matriks" href="tugas4_Determinan-Matriks.html" />
+    <link rel="prev" title="DETERMINAN MATRIKS" href="tugas4_Determinan-Matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,10 +178,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>1. Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>Matrix Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>ALJABAR MATRIKS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>MATRIKS INVERS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>DETERMINAN MATRIKS</strong></a></li>
 
 
 
@@ -360,7 +360,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -376,6 +378,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-transformasi-linier">Definisi Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-transformasi-linier">Sifat-sifat Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mendapatkan-fungsi-transformasi-matriks">Cara mendapatkan fungsi transformasi matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-dalam-transformasi-linier">Rotasi dalam Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-dalam-transformasi-linier">Refleksi dalam Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komposisi-transformasi-linier">Komposisi Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-transformasi-linier-in-real-life">Penerapan Transformasi Linier in real life</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,7 +403,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
 <h1><strong>Transformasi Linier</strong><a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
-<p>##Definisi Transformasi Linier</p>
+<section id="definisi-transformasi-linier">
+<h2>Definisi Transformasi Linier<a class="headerlink" href="#definisi-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Transformasi linier adalah fungsi yang memetakan elemen-elemen pada suatu ruang vektor ke elemen-elemen pada ruang vektor lainnya, dengan mempertahankan sifat-sifat linier.</p>
 <p>Secara matematis, jika T adalah transformasi linier dari ruang vektor U ke ruang vektor V, maka T harus memenuhi dua syarat: T(u+v) = T(u) + T(v) dan T(ku) = kT(u), untuk setiap u dan v pada U, dan setiap skalar k.</p>
 <div class="cell docutils container">
@@ -428,14 +445,18 @@ document.write(`
 </div>
 </div>
 </div>
-<p>##Sifat-sifat Transformasi Linier</p>
+</section>
+<section id="sifat-sifat-transformasi-linier">
+<h2>Sifat-sifat Transformasi Linier<a class="headerlink" href="#sifat-sifat-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Transformasi linier memiliki beberapa sifat penting, yaitu:</p>
 <ol class="arabic simple">
 <li><p>Kekontinuan: Transformasi linier adalah fungsi kontinyu, artinya perubahan kecil pada input akan menghasilkan perubahan kecil pada output.</p></li>
 <li><p>Kelinieran: Transformasi linier mempertahankan sifat-sifat linier, seperti sifat distributif dan sifat homogen.</p></li>
 <li><p>Invertibilitas: Jika transformasi linier T bersifat bijektif, maka T memiliki invers yang juga merupakan transformasi linier.</p></li>
 </ol>
-<p>##Cara mendapatkan fungsi transformasi matriks</p>
+</section>
+<section id="cara-mendapatkan-fungsi-transformasi-matriks">
+<h2>Cara mendapatkan fungsi transformasi matriks<a class="headerlink" href="#cara-mendapatkan-fungsi-transformasi-matriks" title="Link to this heading">#</a></h2>
 <p>Untuk mendapatkan fungsi transformasi matriks, kita perlu memahami bahwa setiap operasi transformasi geometri dalam ruang dua dimensi atau tiga dimensi bisa direpresentasikan sebagai perkalian matriks dengan vektor-vektor yang mewakili titik-titik dalam ruang tersebut.</p>
 <p>Berikut adalah beberapa jenis transformasi yang umum dan matriks yang mewakilinya:</p>
 <ol class="arabic">
@@ -513,7 +534,9 @@ Shear paralel dengan sumbu x atau y:</p>
 </pre></div>
 </div>
 <p>perlu diingat bahwa dalam kasus transformasi yang melibatkan translasi, kita harus menggunakan homogeneous coordinates untuk memperoleh representasi matriks yang tepat.</p>
-<p>##Rotasi dalam Transformasi Linier</p>
+</section>
+<section id="rotasi-dalam-transformasi-linier">
+<h2>Rotasi dalam Transformasi Linier<a class="headerlink" href="#rotasi-dalam-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Rotasi adalah transformasi linier yang memutar vektor pada suatu sudut tertentu terhadap suatu titik atau sumbu.</p>
 <p>Jika T adalah transformasi rotasi dengan sudut θ, maka T(v) = [cos(θ) -sin(θ); sin(θ) cos(θ)]v.</p>
 <p>Rotasi banyak digunakan dalam animasi, desain grafis, dan komputasi geometri untuk memutarkan objek pada sumbu tertentu.</p>
@@ -568,7 +591,9 @@ Shear paralel dengan sumbu x atau y:</p>
 </div>
 </div>
 <p>Kode di atas akan melakukan rotasi pada titik-titik sebesar 90 derajat (π/2 radian).</p>
-<p>##Refleksi dalam Transformasi Linier</p>
+</section>
+<section id="refleksi-dalam-transformasi-linier">
+<h2>Refleksi dalam Transformasi Linier<a class="headerlink" href="#refleksi-dalam-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Salah satu jenis transformasi linier yang penting adalah refleksi.</p>
 <p>Refleksi adalah transformasi linier yang membalikkan arah vektor pada suatu garis tertentu.</p>
 <p>Jika T adalah transformasi refleksi terhadap garis l, maka T(v) = -v + 2(v · u)u, di mana u adalah vektor satuan pada garis l.</p>
@@ -628,7 +653,9 @@ Shear paralel dengan sumbu x atau y:</p>
 </div>
 </div>
 <p>Kode di atas akan melakukan refleksi pada titik-titik terhadap sumbu X dan sumbu Y.</p>
-<p>##Komposisi Transformasi Linier</p>
+</section>
+<section id="komposisi-transformasi-linier">
+<h2>Komposisi Transformasi Linier<a class="headerlink" href="#komposisi-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Dua atau lebih transformasi linier dapat dikompositkan untuk membentuk transformasi linier baru.</p>
 <p>Jika T dan S adalah dua transformasi linier, maka komposisi T∘S adalah transformasi linier baru yang memetakan elemen-elemen pada ruang vektor U ke elemen-elemen pada ruang vektor V.</p>
 <p>Komposisi transformasi linier banyak digunakan dalam pemrograman, pengolahan citra, dan aljabar linier terapan.</p>
@@ -698,7 +725,9 @@ Shear paralel dengan sumbu x atau y:</p>
 </div>
 <p>Kode di atas akan melakukan dua transformasi linier: rotasi sebesar 45 derajat dan skala dengan faktor 2 untuk kedua sumbu.</p>
 <p>Kemudian, kode akan menggabungkan kedua transformasi tersebut menjadi satu transformasi komposit dan menerapkannya pada beberapa titik.</p>
-<p>##Penerapan Transformasi Linier in real life</p>
+</section>
+<section id="penerapan-transformasi-linier-in-real-life">
+<h2>Penerapan Transformasi Linier in real life<a class="headerlink" href="#penerapan-transformasi-linier-in-real-life" title="Link to this heading">#</a></h2>
 <p>Transformasi linier memiliki banyak penerapan dalam dunia nyata, seperti:</p>
 <ol class="arabic simple">
 <li><p>Pengolahan Citra: Transformasi linier dapat digunakan untuk operasi-operasi pada citra digital, seperti rotasi, skala, refleksi, dan proyeksi.</p></li>
@@ -706,6 +735,7 @@ Shear paralel dengan sumbu x atau y:</p>
 <li><p>Ekonomi dan Keuangan: Transformasi linier dapat digunakan untuk menganalisis dan memodelkan data ekonomi dan keuangan, seperti analisis regresi linier.</p></li>
 <li><p>Matematika dan Sains: Transformasi linier merupakan konsep dasar dalam aljabar linier, geometri, dan berbagai cabang matematika lainnya.</p></li>
 </ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -744,7 +774,7 @@ Shear paralel dengan sumbu x atau y:</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Determinan Matriks</strong></p>
+        <p class="prev-next-title"><strong>DETERMINAN MATRIKS</strong></p>
       </div>
     </a>
     <a class="right-next"
@@ -762,6 +792,27 @@ Shear paralel dengan sumbu x atau y:</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-transformasi-linier">Definisi Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-transformasi-linier">Sifat-sifat Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mendapatkan-fungsi-transformasi-matriks">Cara mendapatkan fungsi transformasi matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotasi-dalam-transformasi-linier">Rotasi dalam Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-dalam-transformasi-linier">Refleksi dalam Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komposisi-transformasi-linier">Komposisi Transformasi Linier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penerapan-transformasi-linier-in-real-life">Penerapan Transformasi Linier in real life</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

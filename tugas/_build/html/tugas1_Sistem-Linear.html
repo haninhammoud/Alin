@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN &#8212; My sample book</title>
+    <title>SISTEM LINEAR &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1_Sistem-Linear';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Matriks" href="tugas2_Aljabar-Matriks.html" />
+    <link rel="next" title="ALJABAR MATRIKS" href="tugas2_Aljabar-Matriks.html" />
     <link rel="prev" title="Welcome to Hanin’s Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,10 +180,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>1. Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>Matrix Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>SISTEM LINEAR</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>ALJABAR MATRIKS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_Matrik-Invers.html"><strong>MATRIKS INVERS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>DETERMINAN MATRIKS</strong></a></li>
 
 
 
@@ -375,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</h1>
+    <h1>SISTEM LINEAR</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,6 +385,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-linear-dan-metode-eliminasi-gaussian">SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-linier">Penyelesaian sistem linier</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-penyelesaian-dengan-menggunakan-eliminasi-gauss">Tahapan penyelesaian dengan menggunakan eliminasi GAUSS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendefinisikan-fungsi-operasi-baris-eliminasi-gauss">Mendefinisikan fungsi operasi baris eliminasi GAUSS</a></li>
@@ -399,8 +400,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-linear-dan-metode-eliminasi-gaussian">
-<h1><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong><a class="headerlink" href="#sistem-linear-dan-metode-eliminasi-gaussian" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-linear">
+<h1><strong>SISTEM LINEAR</strong><a class="headerlink" href="#sistem-linear" title="Link to this heading">#</a></h1>
+<section id="sistem-linear-dan-metode-eliminasi-gaussian">
+<h2>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN<a class="headerlink" href="#sistem-linear-dan-metode-eliminasi-gaussian" title="Link to this heading">#</a></h2>
 <p><strong>ELIMINASI GAUSSIAN</strong></p>
 <p>Eliminasi gaussian ditemukan oleh Carl Friedrich Guss,metode ini dapat dimanfaatkan untuk memecahkan sistem persamaan linear dengan merepresentasikan(mengubah) menjadi bentuk matriks,matriks tersebut lalu diubah dalam bentuk Eselon Baris melalui operasi Baris Elemter. lalu sistem diselesaikan dengan subtitusi balik.</p>
 <p><strong>Bentuk Eselon Baris</strong></p>
@@ -416,6 +419,7 @@ document.write(`
 <li><p>Kalikan persamaan dengan bilangan apa pun yang bukan nol.</p></li>
 <li><p>Gantikan suatu persamaan dengan jumlah persamaan itu sendiri dan kelipatan persamaan lainnya.</p></li>
 </ol>
+</section>
 <section id="penyelesaian-sistem-linier">
 <h2>Penyelesaian sistem linier<a class="headerlink" href="#penyelesaian-sistem-linier" title="Link to this heading">#</a></h2>
 <p>Penyelesaian sistem persamaan linier dengan menggunakan eliminasi gauss.</p>
@@ -808,7 +812,7 @@ x1: 1
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>1. Matriks</strong></p>
+        <p class="prev-next-title"><strong>ALJABAR MATRIKS</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -828,6 +832,7 @@ x1: 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-linear-dan-metode-eliminasi-gaussian">SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-linier">Penyelesaian sistem linier</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-penyelesaian-dengan-menggunakan-eliminasi-gauss">Tahapan penyelesaian dengan menggunakan eliminasi GAUSS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendefinisikan-fungsi-operasi-baris-eliminasi-gauss">Mendefinisikan fungsi operasi baris eliminasi GAUSS</a></li>

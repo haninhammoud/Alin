@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Matrix Invers &#8212; My sample book</title>
+    <title>MATRIKS INVERS &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas3_Matrik-Invers';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Determinan Matriks" href="tugas4_Determinan-Matriks.html" />
-    <link rel="prev" title="1. Matriks" href="tugas2_Aljabar-Matriks.html" />
+    <link rel="next" title="DETERMINAN MATRIKS" href="tugas4_Determinan-Matriks.html" />
+    <link rel="prev" title="ALJABAR MATRIKS" href="tugas2_Aljabar-Matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,10 +180,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR DAN METODE ELIMINASI GAUSSIAN</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>1. Matriks</strong></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Matrix Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>Determinan Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1_Sistem-Linear.html"><strong>SISTEM LINEAR</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2_Aljabar-Matriks.html"><strong>ALJABAR MATRIKS</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>MATRIKS INVERS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4_Determinan-Matriks.html"><strong>DETERMINAN MATRIKS</strong></a></li>
 
 
 
@@ -375,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Matrix Invers</h1>
+    <h1>MATRIKS INVERS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,7 +385,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matrix Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matriks Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-invers">Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-matrix-invers">Sifat sifat Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">Mencari invers dengan eliminasi gaus jordan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier-dengan-matrix-invers-dengan-6-variabel">Solusi sistem persamaan linier dengan matrix invers dengan 6 variabel</a></li>
@@ -401,16 +402,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matrix-invers">
-<h1><strong>Matrix Invers</strong><a class="headerlink" href="#matrix-invers" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="matriks-invers">
+<h1><strong>MATRIKS INVERS</strong><a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Matriks Invers<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>sifat-sifat matrix invers</p></li>
 <li><p>mencari invers dengan eliminasi gaus jordan</p></li>
 <li><p>solusi sistem persamaan linier dengan matrix invers</p></li>
 <li><p>(membuat soal persamaan linier 6 variabel)</p></li>
 </ul>
-<section id="id1">
-<h2>Matrix Invers<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+</section>
+<section id="matrix-invers">
+<h2>Matrix Invers<a class="headerlink" href="#matrix-invers" title="Link to this heading">#</a></h2>
 <p>Dalam aljabar linear matrix persegi A n x n disebut invertible (atau juga disebut nonsingular, nondegenerate, atau biasanya digunakan secara umum).</p>
 <p>Jika terdapat sebuah matrix persegi B n x n maka: AB = BA = I, dimana I adalah dinotasikan dengan matrix Identitas n x n dan perkalian yang digunakan adalah perkalian matrix biasa. Maka Matrix B secara unik ditentukan oleh Matrix A, dan disebut Inverse dari Matrix A. dinotasikan dengan .</p>
 <p>Matrix inversion adalah proses untuk menemukan invers marix dari invertible Matrix. Lain halnya Matrix persegi yang tidak dapat dibalik disebut Matrix singular atau matrix tunggal atau degenerate</p>
@@ -1491,7 +1495,7 @@ Pembulatan Matrix I =
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>1. Matriks</strong></p>
+        <p class="prev-next-title"><strong>ALJABAR MATRIKS</strong></p>
       </div>
     </a>
     <a class="right-next"
@@ -1499,7 +1503,7 @@ Pembulatan Matrix I =
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Determinan Matriks</strong></p>
+        <p class="prev-next-title"><strong>DETERMINAN MATRIKS</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1519,7 +1523,8 @@ Pembulatan Matrix I =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matrix Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matriks Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-invers">Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-matrix-invers">Sifat sifat Matrix Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-dengan-eliminasi-gaus-jordan">Mencari invers dengan eliminasi gaus jordan</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier-dengan-matrix-invers-dengan-6-variabel">Solusi sistem persamaan linier dengan matrix invers dengan 6 variabel</a></li>
